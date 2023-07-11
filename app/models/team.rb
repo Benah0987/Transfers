@@ -1,2 +1,5 @@
 class Team < ApplicationRecord
-end
+    has_many :players
+    has_many :transfers
+  end
+  

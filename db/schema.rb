@@ -10,5 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_11_162319) do
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.integer "stamina"
+    t.integer "physical"
+    t.integer "pace"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transfers", force: :cascade do |t|
+    t.integer "player_id", null: false
+    t.integer "team_id", null: false
+    t.date "transfer_date"
+    t.integer "transfer_fee"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_transfers_on_player_id"
+    t.index ["team_id"], name: "index_transfers_on_team_id"
+  end
+
+  add_foreign_key "transfers", "players"
+  add_foreign_key "transfers", "teams"
 end
