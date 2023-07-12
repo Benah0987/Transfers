@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_162319) do
     t.integer "stamina"
     t.integer "physical"
     t.integer "pace"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

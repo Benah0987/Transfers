@@ -7,6 +7,8 @@ class CreatePlayers < ActiveRecord::Migration[7.0]
       t.integer :physical
       t.integer :pace
 
+      t.string   :image
+
       t.timestamps
     end
   end
