@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_11_162319) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_12_181233) do
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.integer "age"
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_11_162319) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "current_team"
   end
 
   create_table "teams", force: :cascade do |t|
