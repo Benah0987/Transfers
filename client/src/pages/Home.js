@@ -46,7 +46,7 @@ function Home() {
                 src={player.image}
                 className="card-img-tops"
                 alt=""
-                style={{ objectFit: 'cover', height: '200px' }}
+                style={{ objectFit: 'cover', height: '300px' }}
               />
               <div className="card-body d-flex justify-content-center flex-column">
                 <h5 className="card-title">{player.name}</h5>
